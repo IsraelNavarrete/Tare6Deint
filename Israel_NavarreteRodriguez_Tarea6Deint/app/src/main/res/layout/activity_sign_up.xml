@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/BlackBackground">
+
+    <LinearLayout
+        android:id="@+id/linearLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btLoginActivity"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/averia_libre_light_italic"
+            android:onClick="showLogin"
+            android:text="@string/btSignInActivity"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btSignUpActivity"
+            android:fontFamily="@font/averia_libre_light_italic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="@string/btSignUpActivity"
+            style="@style/Widget.AppCompat.Button.Colored"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvRegistro"
+        android:layout_width="318dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="@dimen/signUp_tvRegistro_margin_top"
+        android:fontFamily="@font/averia_libre_light_italic"
+        android:gravity="center"
+        android:text="@string/tvRegistro"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLogin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="300dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        app:errorEnabled="true"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/signUp_tilCorreo_margin_top"
+        app:layout_constraintEnd_toStartOf="@+id/glFinal"
+        app:layout_constraintStart_toStartOf="@+id/glInicio"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegistro"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:hintTextAppearance="@style/tilHintStyle"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/averia_libre_light_italic"
+            android:hint="@string/tieEmail"
+            android:background="@color/BlackBackgroundtil"
+            android:textColor="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/signUp_tilPassword_margin_top"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/glFinal"
+        app:layout_constraintStart_toStartOf="@+id/glInicio"
+        app:layout_constraintTop_toBottomOf="@+id/tilUserName"
+        app:hintTextAppearance="@style/tilHintStyle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiePassword"
+            android:fontFamily="@font/averia_libre_light_italic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/BlackBackgroundtil"
+            android:hint="@string/tiePassword"
+            android:textColor="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilUserName"
+        app:errorEnabled="true"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/signUp_tilUserName_margin_top"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/glFinal"
+        app:layout_constraintStart_toStartOf="@+id/glInicio"
+        app:layout_constraintTop_toBottomOf="@+id/tilEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieUserName"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/averia_libre_light_italic"
+            android:layout_height="wrap_content"
+            android:background="@color/BlackBackgroundtil"
+            android:hint="@string/tieUserName"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilConfirmPassword"
+        android:layout_width="0dp"
+        app:errorEnabled="true"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/signUp_tilConfirmPassword_margin_top"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/glFinal"
+        app:layout_constraintStart_toStartOf="@+id/glInicio"
+        app:layout_constraintTop_toBottomOf="@+id/tilPassword">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieConfirmPassword"
+            app:errorEnabled="true"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/averia_libre_light_italic"
+            android:layout_height="wrap_content"
+            android:background="@color/BlackBackgroundtil"
+            android:hint="@string/tieConfirmPassword"
+            android:textColor="@color/white" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBarSignUp"
+        android:indeterminate="true"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/glFinal"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="@+id/glInicio"
+        app:layout_constraintTop_toBottomOf="@+id/tilConfirmPassword" />
+
+    <Button
+        android:onClick="validateUser"
+        android:id="@+id/btSignUp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="127dp"
+        android:layout_height="32dp"
+        android:background="@drawable/botones_redondos"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/signup_btSignUp_margin_top"
+        android:fontFamily="@font/averia_libre_light_italic"
+        android:text="@string/btSignUp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/glFinal"
+        app:layout_constraintStart_toStartOf="@+id/glInicio"
+        app:layout_constraintTop_toBottomOf="@+id/tilConfirmPassword" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

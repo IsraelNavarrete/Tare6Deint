@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">EjercicioDeint</string>
+    <string name="tvInicio">Inicia sesión para acceder a las noticias más recientes</string>
+    <string name="tieEmail">Correo</string>
+    <string name="tiePassword">Contraseña</string>
+    <string name="btForgetPassword">¿Ha olvidado su contraseña?</string>
+    <string name="btSignIn">Iniciar sesión</string>
+    <string name="tvIniciaCon">Inicia sesión con:</string>
+    <string name="btSignUpActivity">Registrarse</string>
+    <string name="btSignInActivity">Iniciar sesión</string>
+    <string name="tvSplash">FreakNews</string>
+    <string name="tvRegistro">Registrate para ver las última noticias</string>
+    <string name="tieUserName">Nombre de usuario</string>
+    <string name="tieConfirmPassword">Confirmar contraseña</string>
+    <string name="btSignUp">Registrarse</string>
+    <string-array name="fragments">
+        <item>Seleccionar</item>
+        <item>DashBoard</item>
+        <item>About</item>
+    </string-array>
+    <string name="tieUserNameProfile">Edita tu nombre de usuario</string>
+    <string name="btChangeUserName">Cambiar usuario</string>
+    <string name="tvAboutCreator">Israel Navarrete Rodriguez</string>
+    <string name="tvCreator">Creador</string>
+    <string name="tvdesign">Diseñador</string>
+    <string name="tvAboutDesign">\@Topethemalo</string>
+</resources>

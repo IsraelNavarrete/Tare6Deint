@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="err_user_empty">UserName can not be empty</string>
+    <string name="err_password_empty">Password can not be empty</string>
+    <string name="err_password_format">Password is too short</string>
+    <string name="err_email_empty">Email can not be empty</string>
+    <string name="err_confirmpassword_empty">confirm password can not be empty</string>
+    <string name="err_confirmpassword_equal">confirm password and password are not equals</string>
+</resources>

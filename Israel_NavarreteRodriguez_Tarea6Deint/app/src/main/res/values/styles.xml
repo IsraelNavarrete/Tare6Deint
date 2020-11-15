@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/white</item>
+    <item name="colorPrimaryDark">@color/BlackBackground</item>
+    <item name="colorAccent">@color/BlackBackgroundbt</item>
+    </style>
+    <style name="NoActionBar" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="tilHintStyle" parent="AppTheme">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>

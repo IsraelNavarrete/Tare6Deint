@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DeintExercise</string>
+    <string name="tvInicio">Login to access to recents news</string>
+    <string name="tieEmail">Email</string>
+    <string name="tiePassword">Password</string>
+    <string name="btForgetPassword">Did you forget your password?</string>
+    <string name="btSignIn">Login</string>
+    <string name="tvIniciaCon">Login with:</string>
+    <string name="btSignUpActivity">Sign up</string>
+    <string name="btSignInActivity">Login</string>
+    <string name="tvSplash">FreakNews</string>
+    <string name="tvRegistro">Sign up to view recent news</string>
+    <string name="tieUserName">UserName</string>
+    <string name="tieConfirmPassword">Confirm Password</string>
+    <string name="btSignUp">Sign up</string>
+    <string-array name="fragments">
+        <item>Select</item>
+        <item>DashBoard</item>
+        <item>About</item>
+    </string-array>
+    <string name="tieUserNameProfile">Change your UserName</string>
+    <string name="btChangeUserName">Change UserName</string>
+    <string name="tvAboutCreator">Israel Navarrete Rodriguez</string>
+    <string name="tvCreator">Creator</string>
+    <string name="tvdesign">Design</string>
+    <string name="tvAboutDesign">\@Topethemalo</string>
+</resources>

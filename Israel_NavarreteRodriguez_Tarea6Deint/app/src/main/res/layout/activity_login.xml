@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BlackBackground"
+    tools:context=".ui.login.LoginActivity"
+    tools:deviceIds="wear">
+
+    <LinearLayout
+        android:id="@+id/linearLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btLoginActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/averia_libre_light_italic"
+            android:text="@string/btSignInActivity"
+            android:textColor="@color/white"
+            style="@style/Widget.AppCompat.Button.Colored"/>
+
+        <Button
+            android:id="@+id/btSignUpActivity"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/averia_libre_light_italic"
+            android:onClick="showSignUp"
+            android:text="@string/btSignUpActivity"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvInicio"
+        android:layout_width="318dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="@dimen/login_tvInicio_margin_top"
+        android:fontFamily="@font/averia_libre_light_italic"
+        android:gravity="center"
+        android:text="@string/tvInicio"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLogin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="300dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        app:errorEnabled="true"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_tilCorreo_margin_top"
+        app:layout_constraintEnd_toStartOf="@+id/glFinal"
+        app:layout_constraintStart_toStartOf="@+id/glInicio"
+        app:layout_constraintTop_toBottomOf="@+id/tvInicio"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:hintTextAppearance="@style/tilHintStyle"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/averia_libre_light_italic"
+            android:hint="@string/tieEmail"
+            android:background="@color/BlackBackgroundtil"
+            android:textColor="@color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_tilContraseña_margin_top"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:hintTextAppearance="@style/tilHintStyle"
+        app:layout_constraintEnd_toStartOf="@+id/glFinal"
+        app:layout_constraintStart_toStartOf="@+id/glInicio"
+        app:layout_constraintTop_toBottomOf="@+id/tilEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/BlackBackgroundtil"
+            android:fontFamily="@font/averia_libre_light_italic"
+            android:hint="@string/tiePassword"
+            android:textColor="@color/white"
+            app:errorEnabled="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:indeterminateTint="@color/BlackBackgroundbt"
+        app:layout_constraintBottom_toTopOf="@+id/btForgetPassword"
+        app:layout_constraintEnd_toStartOf="@+id/glFinal"
+        app:layout_constraintStart_toStartOf="@+id/glInicio"
+        app:layout_constraintTop_toBottomOf="@+id/tilPassword" />
+
+    <Button
+        android:id="@+id/btForgetPassword"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/login_btForgetPassword_margin_top"
+        android:text="@string/btForgetPassword"
+        android:textColor="@color/TextColorbtForgetPassword"
+        app:layout_constraintEnd_toStartOf="@+id/glFinal"
+        android:fontFamily="@font/averia_libre_light_italic"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/glInicio"
+        app:layout_constraintTop_toBottomOf="@+id/tilPassword" />
+
+    <Button
+        android:id="@+id/btSignIn"
+        android:onClick="validateUser"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="127dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="@dimen/login_btIniciarSesion_margin_top"
+        android:background="@drawable/botones_redondos"
+        android:fontFamily="@font/averia_libre_light_italic"
+        android:text="@string/btSignIn"
+        app:layout_constraintEnd_toStartOf="@+id/glFinal"
+        app:layout_constraintStart_toStartOf="@+id/glInicio"
+        app:layout_constraintTop_toBottomOf="@+id/btForgetPassword" />
+
+    <TextView
+        android:id="@+id/tvIniciaCon"
+        android:layout_width="131dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="@dimen/login_tvIniciaCon_margin_top"
+        android:fontFamily="@font/averia_libre_light_italic"
+        android:text="@string/tvIniciaCon"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/glFinal"
+        app:layout_constraintStart_toStartOf="@+id/glInicio"
+        app:layout_constraintTop_toBottomOf="@+id/btSignIn"/>
+
+    <ImageButton
+        android:id="@+id/btGoogle"
+        android:layout_width="96dp"
+        android:background="@android:color/transparent"
+        android:layout_height="61dp"
+        android:src="@drawable/ic_google"
+        app:layout_constraintStart_toStartOf="@+id/glInicio"
+        app:layout_constraintTop_toBottomOf="@+id/tvIniciaCon"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_marginTop="@dimen/login_btGoogle_margin_Top"
+        android:layout_marginLeft="@dimen/login_btGoogle_margin_left"/>
+
+    <ImageButton
+        android:id="@+id/btFacebook"
+        android:layout_width="96dp"
+        android:layout_height="61dp"
+        android:src="@drawable/ic_facebook"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toStartOf="@+id/glFinal"
+        app:layout_constraintTop_toBottomOf="@+id/tvIniciaCon"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_marginTop="@dimen/login_btFacebook_margin_Top"
+        android:layout_marginRight="@dimen/login_btFacebook_margin_right"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
